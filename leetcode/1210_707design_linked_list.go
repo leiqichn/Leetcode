@@ -4,7 +4,7 @@ type MyLinkedList struct {
 	// 如何确定结构体里应设置什么变量？
 	// 总的List 包含 有多少个节点，以及头节点是什么
 	Size      int
-	dummyHead *ListNode // 为什么这里用* 不用& 呢
+	dummyHead *ListNode
 }
 
 func Constructor() MyLinkedList {

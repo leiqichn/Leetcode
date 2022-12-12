@@ -9,7 +9,7 @@ func generateMatrix(n int) [][]int {
 	for i := 0; i < n; i++ {
 		matrix[i] = make([]int, n)
 	}
-	for n / 2 {
+	for num <= tar {
 		for i := left; i <= right; i++ {
 			matrix[top][i] = num
 			num++
@@ -34,42 +34,43 @@ func generateMatrix(n int) [][]int {
 	return matrix
 }
 
-func generateMatrix(n int) [][]int {
-	num := 1
-	loop := n / 2
-	offset := 1
-	matrix := make([][]int, n)
-	startX, startY := 0, 0
-	i, j := 0, 0
-	for i := 0; i < n; i++ {
-		matrix[i] = make([]int, n)
-	}
-	for loop > 0 {
-		for j = startY; j < n-offset; j++ { // j 为列的idx
-			matrix[startX][j] = num
-			num++
-		}
-		for i = startX; i < n-offset; i++ {
-			matrix[i][j] = num
-			num++
-		}
-		for ; j > startY; j-- {
-			matrix[i][j] = num
-			num++
-		}
-		for ; i > startX; i-- {
-			matrix[i][j] = num
-			num++
-		}
-		loop--
-		offset++
-		startX++
-		startY++
-
-	}
-
-	if n%2 == 1 {
-		matrix[startX][startY] = num
-	}
-	return matrix
-}
+//
+//func generateMatrix(n int) [][]int {
+//	num := 1
+//	loop := n / 2
+//	offset := 1
+//	matrix := make([][]int, n)
+//	startX, startY := 0, 0
+//	i, j := 0, 0
+//	for i := 0; i < n; i++ {
+//		matrix[i] = make([]int, n)
+//	}
+//	for loop > 0 {
+//		for j = startY; j < n-offset; j++ { // j 为列的idx
+//			matrix[startX][j] = num
+//			num++
+//		}
+//		for i = startX; i < n-offset; i++ {
+//			matrix[i][j] = num
+//			num++
+//		}
+//		for ; j > startY; j-- {
+//			matrix[i][j] = num
+//			num++
+//		}
+//		for ; i > startX; i-- {
+//			matrix[i][j] = num
+//			num++
+//		}
+//		loop--
+//		offset++
+//		startX++
+//		startY++
+//
+//	}
+//
+//	if n%2 == 1 {
+//		matrix[startX][startY] = num
+//	}
+//	return matrix
+//}
