@@ -10,15 +10,14 @@ func letterCombinations(digits string) []string {
 	// 将index 和 字符串对应起来
 	m = []string{"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"}
 	path, res = make([]byte, 0), make([]string, 0)
-	backTracking(digits, 1)
+	backTracking(digits, 0)
 	return res
 }
 func backTracking(digits string, start int) {
 	// 终止条件 ，遍历完digits
 	if start == len(path) {
 		var tmp []byte
-		tmp = make([]byte, len(digits))
-		copy(tmp, path)
+		tmp = string(path)
 		res = append(res, tmp)
 		return
 	}
