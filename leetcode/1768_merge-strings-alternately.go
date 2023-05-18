@@ -5,7 +5,7 @@ func mergeAlternately(word1 string, word2 string) string {
 	res := []byte{}
 	if str == word1 {
 		// 遍历短的word2
-		// 多余的部分
+		// 多余的部分添加到尾部
 		last := word1[len(word1)-lens:]
 		for i := 0; i < len(word2); i++ {
 
