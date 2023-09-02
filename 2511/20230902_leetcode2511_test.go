@@ -11,7 +11,6 @@ func Test_captureForts(t *testing.T) {
 		args args
 		want int
 	}{
-		// TODO: Add test cases.
 		{"good", args{forts: []int{1, 0, 0, -1, 0, 0, -1, 0, 0, 1}}, 2},
 	}
 	for _, tt := range tests {
