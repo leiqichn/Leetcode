@@ -1,4 +1,10 @@
-// leiqi  2023-10-05
+/*
+ * Copyright (c) 2023 Lei Qi. All rights reserved.
+ * Author: Lei Qi
+ * Description: leetcode 1825 设计题
+ * Date: 2023/10/5 下午4:39
+ */
+
 package leetcode1845
 
 import (
@@ -14,7 +20,7 @@ type SeatManager struct {
 
 func Constructor(n int) SeatManager {
 	seatMap := make(map[int]int, n+1)
-	seatSlice := []int{}
+	seatSlice := []int{} // 和make([]int, n+1) 区别
 	for i := 1; i <= n; i++ {
 		seatMap[i] = 0
 		seatSlice = append(seatSlice, i)
