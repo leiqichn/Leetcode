@@ -20,3 +20,18 @@ func singleNumber(nums []int) []int {
 	}
 	return res
 }
+
+// hash
+func singleNumber(nums []int) int {
+	numsMap := make(map[int]int)
+	for _, val := range nums {
+		numsMap[val] += 1
+	}
+	for key, val := range numsMap {
+		if val == 1 {
+			return key
+
+		}
+	}
+	return 0
+}
