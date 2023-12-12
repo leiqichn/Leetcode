@@ -22,7 +22,7 @@ func singleNumber(nums []int) []int {
 }
 
 // hash
-func singleNumber(nums []int) int {
+func singleNumber2(nums []int) int {
 	numsMap := make(map[int]int)
 	for _, val := range nums {
 		numsMap[val] += 1
