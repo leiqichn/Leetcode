@@ -7,6 +7,14 @@
 
 package _00
 
+type point struct {
+	x int
+	y int
+}
+
+var dirct = [][]int{{1, 0}, {0, 1}, {0, -1}, {-1, 0}}
+var visited = map[point]int{}
+
 func numIslands(grid [][]byte) int {
 	if len(grid) == 0 {
 		return 0
@@ -25,8 +33,7 @@ func numIslands(grid [][]byte) int {
 	return res
 }
 
-// r c
-var dirct = [][]int{{1, 0}, {0, 1}, {0, -1}, {-1, 0}}
+//r c
 
 func dfs(grid [][]byte, i, j int) {
 
@@ -45,11 +52,14 @@ func dfs(grid [][]byte, i, j int) {
 	// 记录
 	// 将陆地变成海水
 	grid[i][j] = '0'
+	visited[point{i, j}] = 1
 	// 调用自身 淹没上下左右的陆地
 	for _, item := range dirct {
+
 		myRow := i + item[0]
 		myCol := j + item[1]
-		dfs(grid, myRow, myCol)
+		if _, ok := visited[point{myRow, myCol}]; !ok {
+			dfs(grid, myRow, myCol)
+		}
 	}
-
 }
