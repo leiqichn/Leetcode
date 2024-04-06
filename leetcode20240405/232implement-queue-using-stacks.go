@@ -5,7 +5,7 @@ type MyQueue struct {
 	outputStack []int
 }
 
-func Constructor() MyQueue {
+func Constructor2() MyQueue {
 	return MyQueue{
 		inputStack:  make([]int, 0),
 		outputStack: make([]int, 0),
