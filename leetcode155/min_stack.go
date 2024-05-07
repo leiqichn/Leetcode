@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2023 Lei Qi. All rights reserved.
+ * Copyright (c) 2023-2024 Lei Qi. All rights reserved.
  * Author: Lei Qi
- * Description: 最小栈 设计题
- * Date: 2023/10/12 下午11:35
+ * Description:
+ * Date: 2024/5/8 上午12:55
  */
 
-package leet155_zui_xiao_zhan
+package leetcode155
 
 import "math"
 

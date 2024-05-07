@@ -1,4 +1,11 @@
-package _496_maximum_value_of_a_string_in_an_array
+/*
+ * Copyright (c) 2024 Lei Qi. All rights reserved.
+ * Author: Lei Qi
+ * Description:
+ * Date: 2024/5/8 上午12:55
+ */
+
+package leetcode2496
 
 import (
 	"fmt"

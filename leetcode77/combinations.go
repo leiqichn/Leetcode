@@ -2,10 +2,10 @@
  * Copyright (c) 2024 Lei Qi. All rights reserved.
  * Author: Lei Qi
  * Description:
- * Date: 2024/1/23 下午10:57
+ * Date: 2024/5/8 上午12:55
  */
 
-package _7
+package leetcode77
 
 func combine(n int, k int) [][]int {
 	res := [][]int{}

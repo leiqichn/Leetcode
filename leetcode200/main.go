@@ -2,10 +2,10 @@
  * Copyright (c) 2024 Lei Qi. All rights reserved.
  * Author: Lei Qi
  * Description:
- * Date: 2024/1/24 上午12:21
+ * Date: 2024/5/8 上午12:55
  */
 
-package _00
+package leetcode200
 
 type point struct {
 	x int

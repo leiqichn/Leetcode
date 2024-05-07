@@ -12,6 +12,8 @@ import (
 	"fmt"
 )
 
+var test int
+
 type Browser struct {
 	history  *list.List
 	current  *list.Element
@@ -38,6 +40,7 @@ func (b *Browser) GoBack() string {
 	if b.current.Prev() != nil {
 		b.current = b.current.Prev()
 	}
+	test += 1
 	return b.GetCurrentPage()
 }
 

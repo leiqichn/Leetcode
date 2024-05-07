@@ -1,4 +1,11 @@
-package _511
+/*
+ * Copyright (c) 2024 Lei Qi. All rights reserved.
+ * Author: Lei Qi
+ * Description:
+ * Date: 2024/5/8 上午12:55
+ */
+
+package leetcode2511
 
 // 20230902
 func captureForts(forts []int) int {
