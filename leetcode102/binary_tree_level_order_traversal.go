@@ -7,7 +7,6 @@
 
 package leetcode102
 
-
 /**
  * Definition for a binary tree node.
  * type TreeNode struct {
@@ -17,15 +16,15 @@ package leetcode102
  * }
  */
 
-* type TreeNode struct {
-	    Val int
-	    Left *TreeNode
-	   Right *TreeNode
-	 }
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
 
 func levelOrder(root *TreeNode) [][]int {
 	res := [][]int{}
-	queue := []*TreeNode {}
+	queue := []*TreeNode{}
 
 	if root == nil {
 		return res
@@ -33,10 +32,10 @@ func levelOrder(root *TreeNode) [][]int {
 
 	queue = append(queue, root)
 
-	for len(queue) >0 {
+	for len(queue) > 0 {
 		size := len(queue)
 		level := []int{}
-		for i:=0;i <size; i++ {
+		for i := 0; i < size; i++ {
 			top := queue[0]
 			queue = queue[1:len(queue)]
 			level = append(level, top.Val)
@@ -45,10 +44,10 @@ func levelOrder(root *TreeNode) [][]int {
 				queue = append(queue, top.Right)
 			}
 			if top.Left != nil {
-				queue = append(queue ,top.Left)
+				queue = append(queue, top.Left)
 			}
 		}
-		res = append(res,level)
+		res = append(res, level)
 	}
 	return res
 }
