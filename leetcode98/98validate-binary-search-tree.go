@@ -29,8 +29,9 @@ func helper(root *TreeNode, lower, upper int) bool {
 	if root == nil {
 		return true
 	}
+	// 提前返回不合规的条件
 	if root.Val <= lower || root.Val >= upper {
 		return false
-	}
+	} // else 情况下也不能直接返回true, 而是要递归的看其子树
 	return helper(root.Left, lower, root.Val) && helper(root.Right, root.Val, upper)
 }
