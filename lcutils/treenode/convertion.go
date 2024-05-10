@@ -1,6 +1,6 @@
 package treenode
 
-import "github.com/jtr109/lcutils/nilint"
+import "lcutils/nilint"
 
 func fromNilInt(val *nilint.NilInt) *TreeNode {
 	if val.IsNil() {
@@ -17,15 +17,15 @@ func fromNilInt(val *nilint.NilInt) *TreeNode {
 //
 // We can follow the code below to create a TreeNode of root:
 //
-//     root := treenode.FromSlice([]nilint.NilInt{
-//         nilint.NewInt(3),
-//         nilint.NewInt(9),
-//         nilint.NewInt(20),
-//         nilint.NewNil(),
-//         nilint.NewNil(),
-//         nilint.NewInt(15),
-//         nilint.NewInt(7),
-//     })
+//	root := treenode.FromSlice([]nilint.NilInt{
+//	    nilint.NewInt(3),
+//	    nilint.NewInt(9),
+//	    nilint.NewInt(20),
+//	    nilint.NewNil(),
+//	    nilint.NewNil(),
+//	    nilint.NewInt(15),
+//	    nilint.NewInt(7),
+//	})
 //
 // Explanation:
 //
@@ -64,7 +64,7 @@ func FromSlice(s []nilint.NilInt) *TreeNode {
 //
 // For example, we have the root of a tree with type TreeNode, we can make a convertion like below:
 //
-//    ToSlice(root)
+//	ToSlice(root)
 //
 // The output will be a slice. As is shown in all LeetCode problems, such as https://leetcode.com/problems/maximum-depth-of-binary-tree/.
 func ToSlice(root *TreeNode) []nilint.NilInt {
