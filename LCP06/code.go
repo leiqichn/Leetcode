@@ -1,4 +1,4 @@
-package LCP06_na_ying_bi
+package LCP06
 
 import "math"
 

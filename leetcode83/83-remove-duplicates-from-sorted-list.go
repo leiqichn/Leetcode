@@ -5,7 +5,9 @@
  * Date: 2024/1/14 下午5:51
  */
 
-package _0240114
+package leetcode83
+
+import . "lcutils/listnode"
 
 func deleteDuplicates(head *ListNode) *ListNode {
 	for i := head; i != nil && i.Next != nil; i = i.Next {

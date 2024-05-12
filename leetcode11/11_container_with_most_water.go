@@ -1,4 +1,4 @@
-package _0240324
+package leetcode11
 
 func maxArea(height []int) int {
 	ans := 0

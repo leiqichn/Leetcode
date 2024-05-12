@@ -5,7 +5,7 @@
  * Date: 2024/3/28 下午11:28
  */
 
-package _0240328
+package leetcode3
 
 func lengthOfLongestSubstring(s string) int {
 	// 哈希集合，记录每个字符是否出现过

@@ -5,7 +5,7 @@
  * Date: 2024/2/23 下午9:34
  */
 
-package _0240223
+package leetcode146
 
 type LRUCache struct {
 	capacity int

@@ -5,7 +5,7 @@
  * Date: 2024/2/24 下午10:11
  */
 
-package _0240224 /**
+package leetcode2478 /**
  * Definition for a binary tree node.
  * type TreeNode struct {
  *     Val int

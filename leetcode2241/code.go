@@ -1,4 +1,4 @@
-package leetcode2241_design_an_atm_machine
+package leetcode2241
 
 type ATM struct {
 	orderList []int

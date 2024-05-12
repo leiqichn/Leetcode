@@ -5,7 +5,7 @@
  * Date: 2023/10/16 下午10:56
  */
 
-package leetcode260_single_number_iii
+package leetcode260
 
 func singleNumber(nums []int) []int {
 	res := []int{}

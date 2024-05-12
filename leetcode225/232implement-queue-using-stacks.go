@@ -1,4 +1,4 @@
-package leetcode20240405
+package leetcode225
 
 type MyQueue struct {
 	inputStack  []int

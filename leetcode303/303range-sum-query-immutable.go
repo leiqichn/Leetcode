@@ -1,4 +1,4 @@
-package leetcode20240406
+package leetcode303
 
 type NumArray struct {
 	preSum []int

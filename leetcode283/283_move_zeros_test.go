@@ -1,4 +1,4 @@
-package _0240323
+package leetcode283
 
 import "testing"
 
