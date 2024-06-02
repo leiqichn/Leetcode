@@ -54,7 +54,7 @@ func front(root *TreeNode) (res []*TreeNode) {
  * }
  */
 
-func flatten(root *TreeNode) {
+func flatten2(root *TreeNode) {
 	if root == nil {
 		return
 	}
