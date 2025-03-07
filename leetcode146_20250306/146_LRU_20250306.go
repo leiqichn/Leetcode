@@ -8,7 +8,7 @@ type LRUCache struct {
 
 func Constructor(capacity int) LRUCache {
 	return LRUCache{
-		orderList: make([]int, capacity),
+		orderList: make([]int, 0, capacity), // 39 分钟调试完成，需要确认的是，List初始化需要为空，而不是orderList: make([]int, capacity) 这个是创建capacity个0
 		cacheMaps: make(map[int]int, capacity),
 		capacity:  capacity,
 	}
@@ -37,10 +37,6 @@ func (this *LRUCache) Put(key int, value int) {
 		// 更新key
 		this.cacheMaps[key] = value
 		this.Update(key)
-	} else if len(this.cacheMaps) <= this.capacity-1 {
-		// 新建key
-		this.cacheMaps[key] = value
-		this.orderList = append(this.orderList, key)
 	} else if len(this.cacheMaps) >= this.capacity {
 		// 删除key
 		oldKey := this.orderList[0]
@@ -49,13 +45,9 @@ func (this *LRUCache) Put(key int, value int) {
 		// 新建key
 		this.cacheMaps[key] = value
 		this.orderList = append(this.orderList, key)
+	} else if len(this.cacheMaps) < this.capacity {
+		// 新建key
+		this.cacheMaps[key] = value
+		this.orderList = append(this.orderList, key)
 	}
 }
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * obj := Constructor(capacity);
- * param_1 := obj.Get(key);
- * obj.Put(key,value);
- */
-//leetcode submit region end(Prohibit modification and deletion)
