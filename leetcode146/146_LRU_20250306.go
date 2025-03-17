@@ -1,4 +1,4 @@
-package leetcode146_20250306
+package leetcode146
 
 type LRUCache struct {
 	orderList []int
