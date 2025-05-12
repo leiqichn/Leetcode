@@ -9,7 +9,7 @@ func findEvenNumbers(digits []int) []int {
 		for j := i + 1; j < len(digits); j++ {
 			for k := j + 1; k < len(digits); k++ {
 				if digits[i] != 0 && digits[k]%2 == 0 {
-					tmpNums := i*100 + j*10 + k
+					tmpNums := digits[i]*100 + digits[k]*10 + digits[k]
 					res = append(res, tmpNums)
 				}
 			}
