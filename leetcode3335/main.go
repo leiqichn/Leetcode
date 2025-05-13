@@ -2,10 +2,9 @@ package leetcode3335
 
 func lengthAfterTransformations(s string, t int) int {
 	// 一直进行一个操作 递归操作， 次数
-	count := 0
 	res := 0
 	var dfs func([]byte, int) int
-	dfs = func(s []byte, t int) int {
+	dfs = func(s []byte, count int) int {
 		if t == count {
 			return len(s)
 		}
@@ -21,10 +20,10 @@ func lengthAfterTransformations(s string, t int) int {
 		}
 		count++
 		s = tmp_str
-		dfs(tmp_str, t)
-		return len(tmp_str)
+
+		return dfs(tmp_str, count)
 	}
 	strList := []byte(s)
-	res = dfs(strList, t)
+	res = dfs(strList, 0)
 	return res
 }
