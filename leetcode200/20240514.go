@@ -7,17 +7,16 @@
 
 package leetcode200
 
-func numIslands2(grid [][]byte) int {
-
+func numIslands(grid [][]byte) int {
 	dic := [][]int{
 		{1, 0},
 		{-1, 0},
 		{0, -1},
 		{0, 1},
 	}
-	//var dfs func()
-	// 淹掉陆地
-	dfs := func(grid [][]byte, x, y int) {
+
+	var dfs func([][]byte, int, int)
+	dfs = func(grid [][]byte, x, y int) {
 		row := len(grid)
 		col := len(grid[0])
 
@@ -29,13 +28,11 @@ func numIslands2(grid [][]byte) int {
 			return
 		}
 
-		grid[x][y] = '1'
+		grid[x][y] = '0' // 淹掉陆地
 		for _, d := range dic {
 			xNext := x + d[0]
 			yNext := y + d[1]
-			if grid[x][y] == '1' {
-				dfs(grid, xNext, yNext)
-			}
+			dfs(grid, xNext, yNext)
 		}
 	}
 
