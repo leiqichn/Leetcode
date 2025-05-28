@@ -47,3 +47,22 @@ func helper(root *TreeNode, pre *int) bool {
 
 	return helper(root.Right, pre)
 }
+
+func isValidBST3(root *TreeNode) bool {
+	pre := math.MinInt64 // 使用闭包共享变量pre
+	var dfs func(*TreeNode) bool
+	dfs = func(node *TreeNode) bool {
+		if node == nil {
+			return true
+		}
+		if !dfs(node.Left) {
+			return false
+		}
+		if node.Val <= pre {
+			return false
+		}
+		pre = node.Val
+		return dfs(node.Right)
+	}
+	return dfs(root)
+}
