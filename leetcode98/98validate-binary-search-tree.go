@@ -21,10 +21,12 @@ import (
 )
 
 // 递归 是有效的搜索树
+// 根节点传入的时候，是没有范围的，需要传入正无穷和负无穷
 func isValidBST(root *TreeNode) bool {
 	return helper(root, math.MinInt64, math.MaxInt64)
 }
 
+// 前序遍历
 func helper(root *TreeNode, lower, upper int) bool {
 	if root == nil {
 		return true
