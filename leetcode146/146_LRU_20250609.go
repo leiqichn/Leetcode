@@ -39,6 +39,7 @@ func (this *LRUCache) Put(key int, value int) {
 			val: value,
 		}
 		this.orderList.MoveToBack(this.hash[key])
+		return
 	}
 
 	// 2 需要老化
