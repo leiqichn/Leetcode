@@ -16,9 +16,9 @@ func combine(n int, k int) [][]int {
 			res = append(res, tmp)
 		}
 
-		for i := start; i >= 1; i-- { // 倒序方便
+		for i := start; i <= n; i++ { // 倒序方便
 			//path 还需要 k - len(path) 提前减枝
-			if i < k-len(path) { // 注意是k - len(path)
+			if n-i+1 < k-len(path) { // 注意是k - len(path)
 				break
 			}
 
