@@ -44,8 +44,10 @@ func (h *BigHeap) Pop() any {
 
 // 将 nums 转换成 BigHeap
 func heapify(nums []int) BigHeap {
-	h := make(BigHeap, len(nums)) // 新建BigHeap，长度为lenNums
-	copy(h, nums)                 // 将num copy 到 BigHeap 中去
-	heap.Init(&h)                 // 需要输入指针
+	h := BigHeap{} // 可以直接实例化
+	heap.Init(&h)  // 需要输入指针 初始化之后，可使用push
+	for _, v := range nums {
+		heap.Push(&h, v) // 使用指针
+	}
 	return h
 }
