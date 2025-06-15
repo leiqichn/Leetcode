@@ -13,9 +13,11 @@ func numIslands(grid [][]byte) int {
 	// 遍历二维slice
 	for i := 0; i < r; i++ {
 		for j := 0; j < c; j++ {
-			// 每个位置
-			dfs(grid, i, j, visited)
-			res++
+			if grid[i][j] == '1' { // 注意为1才能判断
+				// 每个位置
+				dfs(grid, i, j, visited)
+				res++
+			}
 		}
 	}
 	return res
@@ -23,7 +25,7 @@ func numIslands(grid [][]byte) int {
 
 func dfs(grid [][]byte, i int, j int, visited [][]byte) {
 	r := len(grid)
-	c := len(grid)
+	c := len(grid[0])
 
 	// 边界判断
 	if i < 0 || j < 0 || i >= r || j >= c {
