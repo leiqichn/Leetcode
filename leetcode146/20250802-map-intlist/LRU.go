@@ -49,7 +49,7 @@ func (this *LRUCache) Update(key int) {
 	// 挪到最后list
 	for i, elem := range this.orderList {
 		if key == elem.key {
-			this.orderList = append(this.orderList[:i], append(this.orderList[:i+1], elem)...) // this.orderList[:i+1] 这里错误， 应为this.orderList[i+1:]
+			this.orderList = append(this.orderList[:i], append(this.orderList[i+1:], elem)...) // this.orderList[:i+1] 这里错误， 应为this.orderList[i+1:]
 			return
 		}
 	}
