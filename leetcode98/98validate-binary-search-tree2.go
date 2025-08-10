@@ -57,12 +57,15 @@ func isValidBST3(root *TreeNode) bool {
 		}
 		if !dfs(node.Left) {
 			return false
-		}
+		} // 左
 		if node.Val <= pre {
 			return false
-		}
+		} // 中
 		pre = node.Val
-		return dfs(node.Right)
+		if !dfs(node.Right) { //右
+			return false
+		}
+		return true
 	}
 	return dfs(root)
 }
