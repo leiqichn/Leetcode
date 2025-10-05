@@ -27,7 +27,7 @@ func threeSum(nums []int) (ans [][]int) {
 				for j++; j < k && nums[j] == nums[j-1]; j++ {
 
 				}
-				for k--; j < k && nums[k] == nums[k-1]; k-- { // 条件需要判断为k+1
+				for k--; j < k && nums[k] == nums[k+1]; k-- { // 条件需要判断为k+1
 
 				}
 			}
