@@ -25,17 +25,17 @@ import (
 func isValidBST2(root *TreeNode) bool {
 	pre := math.MinInt64
 
-	return helper(root, &pre)
+	return helper2(root, &pre)
 }
 
 // 中序遍历
-func helper(root *TreeNode, pre *int) bool {
+func helper2(root *TreeNode, pre *int) bool {
 
 	if root == nil {
 		return true
 	}
 
-	if !helper(root.Left, pre) {
+	if !helper2(root.Left, pre) {
 		return false
 	}
 
@@ -45,7 +45,7 @@ func helper(root *TreeNode, pre *int) bool {
 
 	*pre = root.Val // 只改变指针的值，而不是地址 pre = &root.Val
 
-	return helper(root.Right, pre)
+	return helper2(root.Right, pre)
 }
 
 func isValidBST3(root *TreeNode) bool {

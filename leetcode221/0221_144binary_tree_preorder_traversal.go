@@ -1,6 +1,7 @@
 package leetcode
 
 import "container/list"
+import . "lcutils/treenode"
 
 /*
 *
