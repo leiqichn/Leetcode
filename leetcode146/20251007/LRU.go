@@ -50,7 +50,7 @@ func (this *LRUCache) Put(key int, value int) {
 // 更新位置到最新上 list 最新的位置
 func (this *LRUCache) Update(key int) {
 	for i := 0; i < len(this.lists); i++ {
-		if key == this.lists[i].key {
+		if key == this.lists[i].key { // FIXME 注意这里对比的key, 之前写的的是value错了
 			tmp := this.lists[i]
 			this.lists = append(this.lists[:i], append(this.lists[i+1:], tmp)...)
 			return
